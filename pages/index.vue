@@ -7,12 +7,12 @@
         </div>
         <div class="mt-10 text">
             <div class="flex justify-center">
-                <h2 class="text-[#6200ee] text-[1.4166666667rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
+                <h2 class="text-[#6200ee] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
                 </h2>
             </div>
             <div class="flex justify-center">
 
-                <div class="w-[40%] text-center">
+                <div class="lg:w-[40%] md:w-[100%] text-center">
                     ยินดีต้อนรับเข้าสู่เว็บ pg slot ที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด เล่น สล็อตpg เว็บตรง
                     ได้สะดวกและปลอดภัย
                     บริการครบวงจรที่สุด พร้อมเกมหลากหลายที่มีให้เลือกเล่นอย่างจุใจเพียบ ให้ทุกวันที่นี้
@@ -69,7 +69,7 @@
             </div>
         </div>
         <div class="w-full">
-            <div class="container py-2 mx-auto w-[60%]">
+            <div class="container py-2 mx-auto lg:w-[60%] md:w-[100%] p-10">
                 <div class="grid mt-8 justify-items-stretch">
                     <h2 class="text-[#ff9100] text-[40px] font-normal justify-self-center">โปรโมชั่น
                     </h2>
@@ -92,14 +92,14 @@
                     <div class="grid grid-cols-4 gap-4 mt-4">
                         <div class="justify-self-center ">
                             <div class="flex items-center justify-center ">
-                                <img src="service-1.webp" class="rounded-lg w-[150px]" />
+                                <img src="../assets/service-1.webp" class="rounded-lg w-[150px]" />
                             </div>
                             <p class="text-center text-[#2a2a2e] text-[14px]">เติม-ถอน อัตโนมัติ</p>
                             <p class="text-center text-[#7f7f82] text-[12px]">ปลอดภัย เข้าไว เพียงไม่กี่วินาที</p>
                         </div>
                         <div class="justify-self-center">
                             <div class="flex items-center justify-center ">
-                                <img src="service-2.webp" class="rounded-lg w-[150px]" />
+                                <img src="../assets/service-2.webp" class="rounded-lg w-[150px]" />
 
                             </div>
                             <p class="text-center text-[#2a2a2e] text-[14px]">ทรู วอลเล็ท</p>
@@ -107,7 +107,7 @@
                         </div>
                         <div class="justify-self-center">
                             <div class="flex items-center justify-center ">
-                                <img src="service-3.webp" class="rounded-lg w-[150px]" />
+                                <img src="../assets/service-3.webp" class="rounded-lg w-[150px]" />
 
                             </div>
                             <p class="text-center text-[#2a2a2e] text-[14px]">เกมสนุกกว่า 300 เกม</p>
@@ -115,7 +115,7 @@
                         </div>
                         <div class="justify-self-center">
                             <div class="flex items-center justify-center ">
-                                <img src="service-4.webp" class="rounded-lg w-[150px]" />
+                                <img src="../assets/service-4.webp" class="rounded-lg w-[150px]" />
 
                             </div>
                             <p class="text-center text-[#2a2a2e] text-[14px]">พร้อมบริการ</p>
@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 <div class="mt-10 post">
-                    <div class="grid grid-cols-4 gap-4">
+                    <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2">
                         <div v-for="(data, index) in posts" :key="index"
                             class="items-center justify-center w-full mx-1 duration-300 bg-black rounded-lg cursor-pointer hero_div hover:scale-90 hover:bg-black">
                             <NuxtLink :to="`/article/${data.id}`">

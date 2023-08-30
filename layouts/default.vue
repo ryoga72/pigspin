@@ -16,10 +16,11 @@
         </div>
     </div>
     <slot></slot>
-    <footer class="footer bg-[#310077] text-[#ffffff]">
+
+    <footer class="footer bg-[#310077] text-[#ffffff] p-10">
         <div class="w-full">
-            <div class="container py-2 mx-auto w-[60%]">
-                <div class="grid grid-cols-4 gap-4">
+            <div class="container py-2 mx-auto lg:w-[60%] md:w-[100%]">
+                <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2">
                     <div>
                         <figure><img src="../assets/logo-greyscale-inverse.webp" alt="maquee-cover"
                                 class="w-[140px] h-[35px]" /></figure>
@@ -110,34 +111,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center">
+                <div class="flex justify-center mt-4 mb-4">
                     <h6>พาร์ทเนอร์</h6>
                 </div>
                 <div class="flex justify-center gap-8 mt-4 mb-4">
-                    <button class="btn btn-outline btn-info w-[160px] h-[40px]">
-                        <figure><img src="../assets/logo-greyscale-inverse.webp" alt="maquee-cover"
-                                class=" w-[160px] h-[40px]" /></figure>
-                    </button>
-                    <button class="btn btn-outline btn-info w-[160px] h-[40px]">
-                        <figure><img src="../assets/116lotto.webp" alt="maquee-cover" class=" w-[160px] h-[40px]" />
-                        </figure>
-                    </button>
-                    <button class="btn btn-outline btn-info w-[160px] h-[40px]">
-                        <figure><img src="../assets/betflik168.svg" alt="maquee-cover" class=" w-[160px] h-[40px]" />
-                        </figure>
-                    </button>
-                    <button class="btn btn-outline btn-info w-[160px] h-[40px]">
-                        <figure><img src="../assets/hungrypussy888.webp" alt="maquee-cover" class=" w-[160px] h-[40px]" />
-                        </figure>
-                    </button>
-                    <button class="btn btn-outline btn-info w-[160px] h-[40px]">
-                        <figure><img src="../assets/918kissme.webp" alt="maquee-cover" class=" w-[160px] h-[40px]" />
-                        </figure>
-                    </button>
+                    <div class="grid gap-4 lg:grid-cols-5 md:grid-cols-2">
+                        <button class="btn btn-outline btn-info w-[160px] h-[40px]">
+                            <figure><img src="../assets/logo-greyscale-inverse.webp" alt="maquee-cover"
+                                    class=" w-[160px] h-[40px]" /></figure>
+                        </button>
+                        <button class="btn btn-outline btn-info w-[160px] h-[40px]">
+                            <figure><img src="../assets/116lotto.webp" alt="maquee-cover" class=" w-[160px] h-[40px]" />
+                            </figure>
+                        </button>
+                        <button class="btn btn-outline btn-info w-[160px] h-[40px]">
+                            <figure><img src="../assets/betflik168.svg" alt="maquee-cover" class=" w-[160px] h-[40px]" />
+                            </figure>
+                        </button>
+                        <button class="btn btn-outline btn-info w-[160px] h-[40px]">
+                            <figure><img src="../assets/hungrypussy888.webp" alt="maquee-cover"
+                                    class=" w-[160px] h-[40px]" />
+                            </figure>
+                        </button>
+                        <button class="btn btn-outline btn-info w-[160px] h-[40px]">
+                            <figure><img src="../assets/918kissme.webp" alt="maquee-cover" class=" w-[160px] h-[40px]" />
+                            </figure>
+                        </button>
+                    </div>
                 </div>
                 <hr>
                 <div class="flex justify-center mt-4">
-                    <div class="text-center w-[50%]">
+                    <div class="text-center lg:w-[50%] md:w=[100%]">
                         <p> สัญลักษณ์และรูปภาพต่างๆบนเว็บไซต์ PIGSPIN.com ถือเป็นทรัพย์สินทางปัญญา ห้ามมิให้มีการคัดลอก
                             ดัดแปลง
                             ทำซ้ำ แก้ไข แผยแพร่โดยมิได้รับการยินยอมเป็นลายลักษณ์อักษรจากทาง PIGSPIN
@@ -145,7 +149,6 @@
 
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>
