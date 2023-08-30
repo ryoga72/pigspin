@@ -92,15 +92,14 @@
                     <div class="grid grid-cols-4 gap-4 mt-4">
                         <div class="justify-self-center ">
                             <div class="flex items-center justify-center ">
-                                <nuxt-img src="service-1.webp" class="rounded-lg w-[150px]" />
-
+                                <img src="service-1.webp" class="rounded-lg w-[150px]" />
                             </div>
                             <p class="text-center text-[#2a2a2e] text-[14px]">เติม-ถอน อัตโนมัติ</p>
                             <p class="text-center text-[#7f7f82] text-[12px]">ปลอดภัย เข้าไว เพียงไม่กี่วินาที</p>
                         </div>
                         <div class="justify-self-center">
                             <div class="flex items-center justify-center ">
-                                <nuxt-img src="service-2.webp" class="rounded-lg w-[150px]" />
+                                <img src="service-2.webp" class="rounded-lg w-[150px]" />
 
                             </div>
                             <p class="text-center text-[#2a2a2e] text-[14px]">ทรู วอลเล็ท</p>
@@ -108,7 +107,7 @@
                         </div>
                         <div class="justify-self-center">
                             <div class="flex items-center justify-center ">
-                                <nuxt-img src="service-3.webp" class="rounded-lg w-[150px]" />
+                                <img src="service-3.webp" class="rounded-lg w-[150px]" />
 
                             </div>
                             <p class="text-center text-[#2a2a2e] text-[14px]">เกมสนุกกว่า 300 เกม</p>
@@ -116,7 +115,7 @@
                         </div>
                         <div class="justify-self-center">
                             <div class="flex items-center justify-center ">
-                                <nuxt-img src="service-4.webp" class="rounded-lg w-[150px]" />
+                                <img src="service-4.webp" class="rounded-lg w-[150px]" />
 
                             </div>
                             <p class="text-center text-[#2a2a2e] text-[14px]">พร้อมบริการ</p>
