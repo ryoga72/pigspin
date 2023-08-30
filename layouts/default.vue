@@ -13,14 +13,32 @@
                 </div>
                 <div class="drawer-side">
                     <label for="my-drawer-4" class="drawer-overlay"></label>
-                    <div class="min-h-full p-4 menu w-80 bg-base-200 text-base-content">
-                        <div class="chat chat-start" v-for="(item, index) in chat" :key="index">
-                            <div class="chat-image avatar">
-                                <div class="w-10 rounded-full">
-                                    <img src="../assets/456322.webp" />
+                    <div class="min-h-full menu w-80 bg-base-200 text-base-content">
+                        <div v-for="(item, index) in chat" :key="index">
+                            <div class="chat chat-start" v-if="item.uuid != userId">
+                                <div class="chat-image avatar">
+                                    <div class="w-10 rounded-full">
+                                        <img src="../assets/456322.webp" />
+                                    </div>
+                                </div>
+                                <div class="chat-bubble">{{ item.message.text }}</div>
+                            </div>
+                            <div class="chat chat-end" v-else>
+                                <div class="chat-image avatar">
+                                    <div class="w-10 rounded-full">
+                                        <img src="../assets/456322.webp" />
+                                    </div>
+                                </div>
+                                <div class="chat-bubble">{{ item.message.text }}</div>
+                            </div>
+                        </div>
+                        <div class="fixed flex justify-between w-full p-2 bg-violet-100" style="bottom: 0px;">
+                            <div class="form-control">
+                                <div class="flex space-x-2">
+                                    <input type="text" class="w-full input input-primary input-bordered" v-model="msg">
+                                    <button class="btn btn-primary" @click="SendMsg">SEND</button>
                                 </div>
                             </div>
-                            <div class="chat-bubble">{{item.message.text}}</div>
                         </div>
                     </div>
                     <!-- <ul class="min-h-full p-4 menu w-80 bg-base-200 text-base-content">
@@ -201,23 +219,51 @@
 import { onMounted, ref } from "vue";
 import PubNub from 'pubnub'
 const chat = ref([])
-onMounted(() => {
-    const pubnub = new PubNub({
-        publishKey: "pub-c-7bc82c1b-7294-4711-bf16-63b53443a869",
-        subscribeKey: "sub-c-2e8deb08-9446-49a9-bded-b78c8d876fb1",
-        userId: "myUniqueUserId",
-    });
-    pubnub.fetchMessages(
-        {
-            channels: ['my_channel'],
-            end: '15343325004275466',
-            count: 100
-        },
-        (status, response) => {
-            chat.value = response.channels.my_channel
-            // handle response
-        }
-    );
+const chat_send = ref([])
+const msg = ref('')
+const userId = ref((Math.random() + 1).toString(36).substring(7));
+const pubnub = new PubNub({
+    publishKey: "pub-c-7bc82c1b-7294-4711-bf16-63b53443a869",
+    subscribeKey: "sub-c-2e8deb08-9446-49a9-bded-b78c8d876fb1",
+    userId: userId.value,
+    autoNetworkDetection: true, // enable for non-browser environment automatic reconnection
+    restore: true,
+});
+pubnub.fetchMessages(
+    {
+        channels: ['channel_y'],
+        end: '15343325004275466',
+        count: 100
+    },
+    (status, response) => {
+        chat.value = response.channels.channel_y
+        // handle response
+    }
+);
+pubnub.addListener({
+    message: function (msg) {
+        chat.value.push(msg)
+    }
 })
+pubnub.subscribe({
+    channels: ['channel_y'],
+})
+async function SendMsg() {
+    const newMessage = {
+        text: msg.value,
+    };
+    try {
+        const result = await pubnub.publish({
+            message: newMessage,
+            channel: "channel_y",
+        });
+        msg.value = false
+        console.log("message published w/ server response: ", result);
+    } catch (status) {
+        console.log("publishing failed w/ status: ", status);
+    }
+}
 
 </script>
+
+<style></style>

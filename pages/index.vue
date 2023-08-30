@@ -170,7 +170,6 @@ for (const data of response.data.value) {
     })
 }
 async function SendMsg() {
-    console.log("บทความทั้งหมด")
     const pubnub = new PubNub({
         publishKey: "pub-c-7bc82c1b-7294-4711-bf16-63b53443a869",
         subscribeKey: "sub-c-2e8deb08-9446-49a9-bded-b78c8d876fb1",
