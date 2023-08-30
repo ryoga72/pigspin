@@ -14,7 +14,14 @@
                 <div class="drawer-side">
                     <label for="my-drawer-4" class="drawer-overlay"></label>
                     <div class="min-h-full p-4 menu w-80 bg-base-200 text-base-content">
-
+                        <div class="chat chat-start" v-for="(item, index) in chat" :key="index">
+                            <div class="chat-image avatar">
+                                <div class="w-10 rounded-full">
+                                    <img src="../assets/456322.webp" />
+                                </div>
+                            </div>
+                            <div class="chat-bubble">{{item.message.text}}</div>
+                        </div>
                     </div>
                     <!-- <ul class="min-h-full p-4 menu w-80 bg-base-200 text-base-content">
                         <li><a>Sidebar Item 1</a></li>
@@ -190,3 +197,27 @@
         </div>
     </footer>
 </template>
+<script setup>
+import { onMounted, ref } from "vue";
+import PubNub from 'pubnub'
+const chat = ref([])
+onMounted(() => {
+    const pubnub = new PubNub({
+        publishKey: "pub-c-7bc82c1b-7294-4711-bf16-63b53443a869",
+        subscribeKey: "sub-c-2e8deb08-9446-49a9-bded-b78c8d876fb1",
+        userId: "myUniqueUserId",
+    });
+    pubnub.fetchMessages(
+        {
+            channels: ['my_channel'],
+            end: '15343325004275466',
+            count: 100
+        },
+        (status, response) => {
+            chat.value = response.channels.my_channel
+            // handle response
+        }
+    );
+})
+
+</script>

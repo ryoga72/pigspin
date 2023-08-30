@@ -177,7 +177,7 @@ async function SendMsg() {
         userId: "myUniqueUserId",
     });
     const newMessage = {
-        text: "Hi There!",
+        text: "Hi There! RYOGATEST",
     };
     try {
         const result = await pubnub.publish({
