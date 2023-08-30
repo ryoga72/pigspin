@@ -3,8 +3,29 @@
         <div class="flex-1">
             <a class="text-xl normal-case btn btn-ghost">PIGSPIN</a>
         </div>
-        <div class="flex-none">
-            <ul class="px-1 menu menu-horizontal">
+        <div class="flex-none gap-4">
+            <div class="drawer drawer-end">
+                <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                <div class="drawer-content">
+                    <label for="my-drawer-4"> <img for="my-drawer-4" src="../assets/msg.svg" alt="maquee-cover"
+                            class="w-[35px] h-[35px]" />
+                    </label>
+                </div>
+                <div class="drawer-side">
+                    <label for="my-drawer-4" class="drawer-overlay"></label>
+                    <div class="min-h-full p-4 menu w-80 bg-base-200 text-base-content">
+
+                    </div>
+                    <!-- <ul class="min-h-full p-4 menu w-80 bg-base-200 text-base-content">
+                        <li><a>Sidebar Item 1</a></li>
+                        <li><a>Sidebar Item 2</a></li>
+                    </ul> -->
+                </div>
+            </div>
+            <button class="text-white rounded-full btn btn-primary btn-md">
+                สมัคร / เข้าสู่ระบบ
+            </button>
+            <!-- <ul class="px-1 menu menu-horizontal">
                 <li>
                     <a>
                         <button class="text-white rounded-full btn btn-primary btn-md">
@@ -12,7 +33,23 @@
                         </button>
                     </a>
                 </li>
-            </ul>
+                <li>
+                    <div class="drawer drawer-end">
+                        <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                        <div class="drawer-content">
+                            <label for="my-drawer-4" class="btn btn-primary">Open</label>
+                        </div>
+                        <div class="drawer-side">
+                            <label for="my-drawer-4" class="drawer-overlay"></label>
+                            <ul class="min-h-full p-4 menu w-80 bg-base-200 text-base-content">
+                                <li><a>Sidebar Item 1</a></li>
+                                <li><a>Sidebar Item 2</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul> -->
+
         </div>
     </div>
     <slot></slot>
