@@ -15,7 +15,7 @@
                     <label for="my-drawer-4" class="drawer-overlay"></label>
                     <div class="min-h-full menu w-80 bg-base-200 text-base-content">
                         <div v-for="(item, index) in chat" :key="index">
-                            <div class="chat chat-start" v-if="item.uuid != userId">
+                            <div class="chat chat-start" v-if="item.publisher != pubnub.getUUID()">
                                 <div class="chat-image avatar">
                                     <div class="w-10 rounded-full">
                                         <img src="../assets/456322.webp" />
