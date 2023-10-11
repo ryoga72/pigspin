@@ -7,7 +7,7 @@
         </div>
         <div class="mt-10 text">
             <div class="flex justify-center">
-                <h2 class="text-[#6200ee] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
+                <h2 class="text-[#e68927] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
                 </h2>
             </div>
             <div class="flex justify-center">
@@ -55,15 +55,15 @@
             </infinite-slide-bar>
         </div>
         <div class="flex justify-center mt-4">
-            <button class="rounded-full btn btn-outline btn-primary">ดูเกมทั้งหมด</button>
+            <button class="rounded-full btn btn-outline">ดูเกมทั้งหมด</button>
         </div>
         <div class="flex justify-center mt-8">
-            <div class="card w-96 bg-[#6200ee] text-neutral-content">
+            <div class="card w-96 bg-[#e68927] text-neutral-content">
                 <div class="items-center text-center text-white card-body">
                     <h2 class="card-title text-[1.7279166667rem]">สมัครง่าย</h2>
                     <p class="text-[1.4141666667rem]">แค่ใช้เบอร์มือถือและบัญชีธนาคาร</p>
                     <div class="justify-end mt-2 card-actions">
-                        <button class="rounded-full btn text-[#6200ee]">สมัครสมาชิกเลย!</button>
+                        <button class="rounded-full btn text-[#e68927]">สมัครสมาชิกเลย!</button>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
         <div class="w-full">
             <div class="container py-2 mx-auto lg:w-[60%] md:w-[100%] p-10">
                 <div class="grid mt-8 justify-items-stretch">
-                    <h2 class="text-[#ff9100] text-[40px] font-normal justify-self-center">โปรโมชั่น
+                    <h2 class="text-[#e68927] text-[40px] font-normal justify-self-center">โปรโมชั่น
                     </h2>
                     <div v-for="(data, index) in posts" :key="index" class="items-center justify-center w-full mb-4">
                         <NuxtLink :to="`/article/${data.id}`">
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="flex justify-center mt-4">
-                    <button class="rounded-full btn btn-outline btn-primary">โปรโมชั่นทั้งหมด</button>
+                    <button class="rounded-full btn btn-outline bg-[#e68927] text-white">โปรโมชั่นทั้งหมด</button>
                 </div>
                 <div class="mt-8 service">
                     <h2 class="text-[40px] font-normal justify-self-center">บริการของเรา
@@ -123,7 +123,7 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-4">
-                        <button class="text-white rounded-full btn btn-primary btn-md">สมัครสมาชิกเลย!</button>
+                        <button class="text-white rounded-full btn bg-[#e68927] btn-md">สมัครสมาชิกเลย!</button>
                     </div>
                 </div>
                 <div class="mt-10 ">
@@ -146,7 +146,8 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-4">
-                        <button class="rounded-full btn btn-outline btn-primary" @click="SendMsg">บทความทั้งหมด</button>
+                        <button class="rounded-full btn btn-outline bg-[#e68927] text-white"
+                            @click="SendMsg">บทความทั้งหมด</button>
                     </div>
                 </div>
             </div>

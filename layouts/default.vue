@@ -1,7 +1,7 @@
 <template>
     <div class="fixed top-0 left-0 right-0 z-50 shadow-xl navbar bg-base-100">
         <div class="flex-1">
-            <a class="text-xl normal-case btn btn-ghost">PIGSPIN</a>
+            <a class="text-xl normal-case btn btn-ghost">POPSLOTS</a>
         </div>
         <div class="flex-none gap-4">
             <div class="drawer drawer-end">
@@ -47,7 +47,7 @@
                     </ul> -->
                 </div>
             </div>
-            <button class="text-white rounded-full btn btn-primary btn-md">
+            <button class="text-white rounded-full btn btn-primary btn-md bg-[#e68927]">
                 สมัคร / เข้าสู่ระบบ
             </button>
             <!-- <ul class="px-1 menu menu-horizontal">
@@ -79,13 +79,14 @@
     </div>
     <slot></slot>
 
-    <footer class="footer bg-[#310077] text-[#ffffff] p-10">
+    <footer class="footer bg-[#eb7b31] text-[#ffffff] p-10">
         <div class="w-full">
             <div class="container py-2 mx-auto lg:w-[60%] md:w-[100%]">
                 <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2">
                     <div>
-                        <figure><img src="../assets/logo-greyscale-inverse.webp" alt="maquee-cover"
-                                class="w-[140px] h-[35px]" /></figure>
+                        <h1 class="text-[24px]">POPSLOTS</h1>
+                        <!-- <figure><img src="../assets/logo-greyscale-inverse.webp" alt="maquee-cover"
+                                class="w-[140px] h-[35px]" /></figure> -->
                     </div>
                     <div class="flex flex-col ">
                         <span class="footer-title">Services</span>
@@ -177,11 +178,11 @@
                     <h6>พาร์ทเนอร์</h6>
                 </div>
                 <div class="flex justify-center gap-8 mt-4 mb-4">
-                    <div class="grid gap-4 lg:grid-cols-5 md:grid-cols-2">
-                        <button class="btn btn-outline btn-info w-[160px] h-[40px]">
+                    <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2">
+                        <!-- <button class="btn btn-outline btn-info w-[160px] h-[40px]">
                             <figure><img src="../assets/logo-greyscale-inverse.webp" alt="maquee-cover"
                                     class=" w-[160px] h-[40px]" /></figure>
-                        </button>
+                        </button> -->
                         <button class="btn btn-outline btn-info w-[160px] h-[40px]">
                             <figure><img src="../assets/116lotto.webp" alt="maquee-cover" class=" w-[160px] h-[40px]" />
                             </figure>
@@ -204,9 +205,9 @@
                 <hr>
                 <div class="flex justify-center mt-4">
                     <div class="text-center lg:w-[50%] md:w=[100%]">
-                        <p> สัญลักษณ์และรูปภาพต่างๆบนเว็บไซต์ PIGSPIN.com ถือเป็นทรัพย์สินทางปัญญา ห้ามมิให้มีการคัดลอก
+                        <p> สัญลักษณ์และรูปภาพต่างๆบนเว็บไซต์ POPSLOTS.com ถือเป็นทรัพย์สินทางปัญญา ห้ามมิให้มีการคัดลอก
                             ดัดแปลง
-                            ทำซ้ำ แก้ไข แผยแพร่โดยมิได้รับการยินยอมเป็นลายลักษณ์อักษรจากทาง PIGSPIN
+                            ทำซ้ำ แก้ไข แผยแพร่โดยมิได้รับการยินยอมเป็นลายลักษณ์อักษรจากทาง POPSLOTS
                         </p>
 
                     </div>
@@ -257,7 +258,7 @@ async function SendMsg() {
             message: newMessage,
             channel: "channel_y",
         });
-        msg.value = false
+        msg.value = ''
         console.log("message published w/ server response: ", result);
     } catch (status) {
         console.log("publishing failed w/ status: ", status);
