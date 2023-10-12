@@ -178,7 +178,7 @@
                     <h6>พาร์ทเนอร์</h6>
                 </div>
                 <div class="flex justify-center gap-8 mt-4 mb-4">
-                    <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2">
+                    <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
                         <!-- <button class="btn btn-outline btn-info w-[160px] h-[40px]">
                             <figure><img src="../assets/logo-greyscale-inverse.webp" alt="maquee-cover"
                                     class=" w-[160px] h-[40px]" /></figure>
