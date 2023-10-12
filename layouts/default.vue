@@ -1,7 +1,7 @@
 <template>
     <div class="fixed top-0 left-0 right-0 z-50 shadow-xl navbar bg-base-100">
         <div class="flex-1">
-            <a class="text-xl normal-case btn btn-ghost">POPSLOTS</a>
+            <figure><img src="../assets/logo.webp" alt="maquee-cover" class="w-[110px] h-[80px]" /></figure>
         </div>
         <div class="flex-none gap-4">
             <div class="drawer drawer-end">
@@ -47,7 +47,7 @@
                     </ul> -->
                 </div>
             </div>
-            <button class="text-white rounded-full btn btn-primary btn-md bg-[#e68927]">
+            <button class="text-white rounded-full btn btn-primary btn-md bg-[#e68927] hover:bg-[#e68927]">
                 สมัคร / เข้าสู่ระบบ
             </button>
             <!-- <ul class="px-1 menu menu-horizontal">
@@ -84,9 +84,8 @@
             <div class="container py-2 mx-auto lg:w-[60%] md:w-[100%]">
                 <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2">
                     <div>
-                        <h1 class="text-[24px]">POPSLOTS</h1>
-                        <!-- <figure><img src="../assets/logo-greyscale-inverse.webp" alt="maquee-cover"
-                                class="w-[140px] h-[35px]" /></figure> -->
+                        <!-- <h1 class="text-[24px]">POPSLOTS</h1> -->
+                        <figure><img src="../assets/logo.webp" alt="maquee-cover" class="w-[110px] h-[80px]" /></figure>
                     </div>
                     <div class="flex flex-col ">
                         <span class="footer-title">Services</span>
