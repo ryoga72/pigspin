@@ -85,7 +85,7 @@
         <div class="w-full">
             <div class="container py-2 mx-auto lg:w-[60%] md:w-[100%]">
                 <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
-                    <div class="flex justify-center col-span-2">
+                    <div class="flex justify-center col-span-4 lg:col-span-2">
                         <!-- <h1 class="text-[24px]">POPSLOTS</h1> -->
                         <figure><img src="../assets/logo.webp" alt="maquee-cover" class="w-[110px] h-[80px]" /></figure>
                     </div>
@@ -107,7 +107,7 @@
                             <div class="">SSL Encryption</div>
                         </div>
                     </div>
-                    <div class="flex flex-col col-span-2">
+                    <div class="flex justify-center col-span-4">
                         <div class="grid grid-cols-7 gap-2">
                             <div>
                                 <img class="h-10 rounded-full w-15" src="~/assets/KBANK.png" alt="KBANK">
