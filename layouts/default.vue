@@ -47,7 +47,7 @@
                     </ul> -->
                 </div>
             </div>
-            <button class="text-white rounded-full btn btn-primary btn-md bg-[#e68927] hover:bg-[#e68927]">
+            <button class="text-white rounded-full btn btn-primary btn-md bg-[#e68927] hover:bg-[#e68927] border-none">
                 สมัคร / เข้าสู่ระบบ
             </button>
             <!-- <ul class="px-1 menu menu-horizontal">
