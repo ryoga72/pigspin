@@ -12,7 +12,7 @@
             </div>
             <div class="flex justify-center">
 
-                <div class="lg:w-[40%] md:w-[100%] text-center">
+                <div class="lg:w-[40%] md:w-[100%] text-center text-white">
                     ยินดีต้อนรับเข้าสู่เว็บ pg slot ที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด เล่น สล็อตpg เว็บตรง
                     ได้สะดวกและปลอดภัย
                     บริการครบวงจรที่สุด พร้อมเกมหลากหลายที่มีให้เลือกเล่นอย่างจุใจเพียบ ให้ทุกวันที่นี้
@@ -85,9 +85,10 @@
                     <button class="rounded-full btn btn-outline bg-[#e68927] text-white">โปรโมชั่นทั้งหมด</button>
                 </div>
                 <div class="mt-8 service">
-                    <h2 class="text-[40px] font-normal justify-self-center">บริการของเรา
+                    <h2 class="text-[40px] font-normal justify-self-center text-white">บริการของเรา
                     </h2>
-                    <p>เว็บสล็อตออนไลน เว็บตรงที่พร้อมให้บริการ 24 ชม. เติม-ถอน อัตโนมัติ สะดวก รวดเร็ว ปลอดภัย
+                    <p class="text-white">เว็บสล็อตออนไลน เว็บตรงที่พร้อมให้บริการ 24 ชม. เติม-ถอน อัตโนมัติ สะดวก รวดเร็ว
+                        ปลอดภัย
                     </p>
                     <div class="grid grid-cols-4 gap-4 mt-4">
                         <div class="justify-self-center ">

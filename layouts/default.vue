@@ -77,7 +77,9 @@
 
         </div>
     </div>
-    <slot></slot>
+    <div class=" bg-[#2a2a2a]">
+        <slot></slot>
+    </div>
 
     <footer class="footer bg-[#eb7b31] text-[#ffffff] p-10">
         <div class="w-full">
