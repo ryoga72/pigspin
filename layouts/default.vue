@@ -47,9 +47,15 @@
                     </ul> -->
                 </div>
             </div>
-            <button class="text-white rounded-full btn btn-primary btn-md bg-[#e68927] hover:bg-[#e68927] border-none">
-                สมัคร / เข้าสู่ระบบ
+            <button
+                class="text-white rounded-full btn btn-primary btn-md bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] border-none">
+                <a href="https://m.popslot.bet/login?action=register" class="text-white">สมัคร</a> /
+                <a href="https://m.popslot.bet/login?action=login" class="text-white">เข้าสู่ระบบ</a> / <a
+                    href="https://line.me/R/ti/p/@popslot">
+                    <img src="../assets/line.webp" class="w-[40px]" />
+                </a>
             </button>
+
             <!-- <ul class="px-1 menu menu-horizontal">
                 <li>
                     <a>

@@ -1,13 +1,13 @@
 <template>
     <NuxtLayout name="default">
         <div class="vdo-1">
-            <video autoplay muted>
+            <video autoplay muted class="w-[100%]">
                 <source src="../assets/video_1.mp4" type="video/mp4" />
             </video>
         </div>
         <div class="mt-10 text">
             <div class="flex justify-center">
-                <h2 class="text-[#e68927] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
+                <h2 class="text-[#f0c373] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
                 </h2>
             </div>
             <div class="flex justify-center">
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="mt-8 vdo-2">
-            <video autoplay muted>
+            <video autoplay muted class="w-[100%]">
                 <source src="../assets/video_2.mp4" type="video/mp4" />
             </video>
         </div>
@@ -58,12 +58,15 @@
             <button class="rounded-full btn btn-outline">ดูเกมทั้งหมด</button>
         </div>
         <div class="flex justify-center mt-8">
-            <div class="card w-96 bg-[#e68927] text-neutral-content">
+            <div class="card w-96 bg-[#f0c373] text-neutral-content">
                 <div class="items-center text-center text-white card-body">
+
                     <h2 class="card-title text-[1.7279166667rem]">สมัครง่าย</h2>
                     <p class="text-[1.4141666667rem]">แค่ใช้เบอร์มือถือและบัญชีธนาคาร</p>
                     <div class="justify-end mt-2 card-actions">
-                        <button class="rounded-full btn text-[#e68927]">สมัครสมาชิกเลย!</button>
+                        <a href="https://m.popslot.bet/login?action=register">
+                            <button class="rounded-full btn text-[#f0c373]">สมัครสมาชิกเลย!</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -71,7 +74,7 @@
         <div class="w-full">
             <div class="container py-2 mx-auto lg:w-[60%] md:w-[100%] p-10">
                 <div class="grid mt-8 justify-items-stretch">
-                    <h2 class="text-[#e68927] text-[40px] font-normal justify-self-center">โปรโมชั่น
+                    <h2 class="text-[#f0c373] text-[40px] font-normal justify-self-center">โปรโมชั่น
                     </h2>
                     <div v-for="(data, index) in posts" :key="index" class="items-center justify-center w-full mb-4">
                         <NuxtLink :to="`/article/${data.id}`">
@@ -82,7 +85,8 @@
                     </div>
                 </div>
                 <div class="flex justify-center mt-4">
-                    <button class="rounded-full btn btn-outline bg-[#e68927] text-white">โปรโมชั่นทั้งหมด</button>
+                    <button
+                        class="rounded-full btn btn-outline bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] text-black">โปรโมชั่นทั้งหมด</button>
                 </div>
                 <div class="mt-8 service">
                     <h2 class="text-[40px] font-normal justify-self-center text-white">บริการของเรา
@@ -124,7 +128,12 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-4">
-                        <button class="text-white rounded-full btn bg-[#e68927] btn-md">สมัครสมาชิกเลย!</button>
+
+                        <a href="https://m.popslot.bet/login?action=register">
+                            <button
+                                class="text-black rounded-full btn bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] btn-md">สมัครสมาชิกเลย!</button>
+                        </a>
+
                     </div>
                 </div>
                 <div class="mt-10 ">
@@ -147,7 +156,8 @@
                         </div>
                     </div>
                     <div class="flex justify-center mt-4">
-                        <button class="rounded-full btn btn-outline bg-[#e68927] text-white"
+                        <button
+                            class="rounded-full btn btn-outline bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] text-black"
                             @click="SendMsg">บทความทั้งหมด</button>
                     </div>
                 </div>
