@@ -11,9 +11,6 @@
             </div>
         </section>
 
-        <section>
-            sss
-        </section>
         <div class="mt-[10px] lg:mt-[10.5rem] text">
             <div class="flex justify-center">
                 <h2 class="text-[#f0c373] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด

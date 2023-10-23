@@ -4,7 +4,7 @@
             <figure><img src="../assets/logo.webp" alt="maquee-cover" class="w-[110px] h-[80px]" /></figure>
         </div>
         <div class="flex-none gap-4">
-            <div class="drawer drawer-end">
+            <!-- <div class="drawer drawer-end">
                 <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content">
                     <label for="my-drawer-4"> <img for="my-drawer-4" src="../assets/msg.svg" alt="maquee-cover"
@@ -41,19 +41,19 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <ul class="min-h-full p-4 menu w-80 bg-base-200 text-base-content">
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
-                    </ul> -->
                 </div>
-            </div>
+            </div> -->
+            <a href="https://line.me/R/ti/p/@popslot">
+                <img src="../assets/line.webp" class="w-[40px]" />
+            </a>
             <button
                 class="text-white rounded-full btn btn-primary btn-md bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] border-none">
-                <a href="https://m.popslot.bet/login?action=register" class="text-white">สมัคร</a> /
-                <a href="https://m.popslot.bet/login?action=login" class="text-white">เข้าสู่ระบบ</a> / <a
-                    href="https://line.me/R/ti/p/@popslot">
-                    <img src="../assets/line.webp" class="w-[40px]" />
-                </a>
+                <a href="https://m.popslot.bet/login?action=login" class="text-white">เข้าสู่ระบบ</a>
+            </button>
+            <button
+                class="regis text-white rounded-full btn btn-primary btn-md bg-gradient-to-b from-yellow-100 via-[#eb4034] to-[#eb4034] border-none ">
+                <a href="https://m.popslot.bet/login?action=register" class="text-white">สมัครสมาชิก</a>
+
             </button>
 
             <!-- <ul class="px-1 menu menu-horizontal">
@@ -274,4 +274,40 @@ async function SendMsg() {
 
 </script>
 
-<style></style>
+<style scpoed>
+.regis {
+    background-color: #1c87c9;
+    -webkit-border-radius: 60px;
+    border-radius: 60px;
+    border: none;
+    color: #eeeeee;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+@keyframes glowing {
+    0% {
+        background-color: #eb4034;
+        box-shadow: 0 0 5px #eb4034;
+    }
+
+    50% {
+        background-color: #eb4034;
+        box-shadow: 0 0 20px #eb4034;
+    }
+
+    100% {
+        background-color: #eb4034;
+        box-shadow: 0 0 5px #eb4034;
+    }
+}
+
+.regis {
+    animation: glowing 1300ms infinite;
+}
+</style>
