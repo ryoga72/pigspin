@@ -1,10 +1,16 @@
 <template>
     <NuxtLayout name="default">
-        <div class="vdo-1">
-            <video autoplay muted class="w-[100%]">
-                <source src="../assets/video_1.mp4" type="video/mp4" />
-            </video>
-        </div>
+        <section class="mt-8 image image-shrink">
+            <div id="shrink">
+                <video autoplay muted class="w-[100%]">
+                    <source src="../assets/video_1.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div id="shrink-tagline" class="tagline">
+                <img src="../assets/bgvideo.webp" alt="maquee-cover" />
+            </div>
+        </section>
+
         <div class="mt-10 text">
             <div class="flex justify-center">
                 <h2 class="text-[#f0c373] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
@@ -175,6 +181,7 @@ const response = await useFetch(`https://wordpress-704245-3836348.cloudwaysapps.
 const content = await useFetch(`https://wordpress-704245-3836348.cloudwaysapps.com/wp-json/wp/v2/pages/16`)
 const contentJson = JSON.parse(content.data.value)
 const posts: any = []
+const { $gsap } = useNuxtApp()
 for (const data of response.data.value) {
     posts.push({
         ...data,
@@ -201,5 +208,75 @@ async function SendMsg() {
         console.log("publishing failed w/ status: ", status);
     }
 }
+
+onMounted(() => {
+    const shrinkTl = $gsap.timeline({
+        scrollTrigger: {
+            pin: true,
+            trigger: "#shrink",
+            scrub: 1.2,
+            start: "top center",
+            end: "bottom center",
+            markers: true,
+            ease: "power1.in"
+        }
+    });
+
+    shrinkTl.to("#shrink", {
+        duration: 2,
+        scale: 0.4,
+        filter: "blur(0px)",
+
+    });
+    shrinkTl.to("#shrink-tagline", {
+        duration: 0.4,
+        // delay: -0.7,
+        opacity: 1,
+        y: 0,
+        ease: "power2.in"
+    });
+})
 </script>
-<style ></style>
+<style scoped>
+.image {
+    background-color: #f2f2f2;
+    line-height: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tagline {
+    position: absolute;
+    padding-bottom: 16px;
+    color: white;
+    font-size: 48px;
+    opacity: 0;
+}
+
+.image>div {
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    object-fit: contain;
+}
+
+#grow-tagline {
+    transform: translateY(60px);
+}
+
+#grow {
+    transform: scale(0.8);
+}
+
+#shrink {
+    transform: scale(1);
+}
+
+#shrink-tagline {
+    transform: translateY(80px);
+}
+</style>
