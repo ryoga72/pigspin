@@ -3,7 +3,7 @@
         <div class="flex-1">
             <figure><img src="../assets/logo.webp" alt="maquee-cover" class="w-[110px] h-[80px]" /></figure>
         </div>
-        <div class="flex-none gap-4">
+        <div class="flex-none gap-2">
             <!-- <div class="drawer drawer-end">
                 <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content">
@@ -44,15 +44,15 @@
                 </div>
             </div> -->
             <a href="https://line.me/R/ti/p/@popslot">
-                <img src="../assets/line.webp" class="w-[40px]" />
+                <img src="../assets/line.webp" class="w-[30px] lg:w-[40px]" />
             </a>
             <button
-                class="text-white rounded-full btn btn-primary btn-md bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] border-none">
-                <a href="https://m.popslot.bet/login?action=login" class="text-white">เข้าสู่ระบบ</a>
+                class="text-white rounded-full btn btn-primary lg:btn-md btn-sm bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] border-none">
+                <a href="https://m.popslot.bet/login?action=login" class="text-sm text-white">เข้าสู่ระบบ</a>
             </button>
             <button
-                class="regis text-white rounded-full btn btn-primary btn-md bg-gradient-to-b from-yellow-100 via-[#eb4034] to-[#eb4034] border-none ">
-                <a href="https://m.popslot.bet/login?action=register" class="text-white">สมัครสมาชิก</a>
+                class="regis text-white rounded-full btn btn-primary lg:btn-md btn-sm bg-gradient-to-b from-yellow-100 via-[#eb4034] to-[#eb4034] border-none ">
+                <a href="https://m.popslot.bet/login?action=register" class="text-sm text-white">สมัครสมาชิก</a>
 
             </button>
 
@@ -275,21 +275,6 @@ async function SendMsg() {
 </script>
 
 <style scpoed>
-.regis {
-    background-color: #1c87c9;
-    -webkit-border-radius: 60px;
-    border-radius: 60px;
-    border: none;
-    color: #eeeeee;
-    cursor: pointer;
-    display: inline-block;
-    font-family: sans-serif;
-    font-size: 20px;
-    padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-}
-
 @keyframes glowing {
     0% {
         background-color: #eb4034;
