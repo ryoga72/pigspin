@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout name="default">
-        <section class="mt-8 image image-shrink">
+        <section class="mt-8 image image-shrink" v-if="$device.isDesktop">
             <div id="shrink">
                 <video autoplay muted class="w-[100%]">
                     <source src="../assets/video_1.mp4" type="video/mp4" />
@@ -10,8 +10,18 @@
                 <img src="../assets/bgvideo.webp" alt="maquee-cover" />
             </div>
         </section>
+        <section class="mt-8 image image-shrink" v-if="$device.isMobile">
+            <div id="shrink">
+                <video autoplay muted class="w-[100%]  object-cover" style="height: 100vh;">
+                    <source src="../assets/PIGSPIN360x493.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div id="shrink-tagline" class="tagline">
+                <img src="../assets/phone-mobile-cut.webp" alt="maquee-cover" class="object-cover w-[100%]  h-screen" />
+            </div>
+        </section>
 
-        <div class="mt-[10px] lg:mt-[10.5rem] text">
+        <div class="mt-[2rem] lg:mt-[12rem] text">
             <div class="flex justify-center">
                 <h2 class="text-[#f0c373] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
                 </h2>
@@ -250,7 +260,7 @@ onMounted(() => {
 
 .tagline {
     position: absolute;
-    padding-bottom: 16px;
+    /* padding-bottom: 16px; */
     color: white;
     font-size: 48px;
     opacity: 0;
@@ -262,7 +272,7 @@ onMounted(() => {
 
 .image img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 #shrink {

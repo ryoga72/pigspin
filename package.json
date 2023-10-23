@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.0.0-rc.1",
+    "@nuxtjs/device": "^3.1.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@wordpress/block-library": "^8.17.0",
     "pubnub": "^7.3.1",

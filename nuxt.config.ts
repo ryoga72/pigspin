@@ -27,7 +27,12 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@hypernym/nuxt-gsap"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image",
+    "@hypernym/nuxt-gsap",
+    "@nuxtjs/device",
+  ],
   image: {
     dir: "assets/",
   },

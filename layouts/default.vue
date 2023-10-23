@@ -48,11 +48,12 @@
             </a>
             <button
                 class="text-white rounded-full btn btn-primary lg:btn-md btn-sm bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] border-none">
-                <a href="https://m.popslot.bet/login?action=login" class="text-sm text-white">เข้าสู่ระบบ</a>
+                <a href="https://m.popslot.bet/login?action=login" class="text-[8px] lg:text-sm text-white">เข้าสู่ระบบ</a>
             </button>
             <button
                 class="regis text-white rounded-full btn btn-primary lg:btn-md btn-sm bg-gradient-to-b from-yellow-100 via-[#eb4034] to-[#eb4034] border-none ">
-                <a href="https://m.popslot.bet/login?action=register" class="text-sm text-white">สมัครสมาชิก</a>
+                <a href="https://m.popslot.bet/login?action=register"
+                    class="text-[8px] lg:text-sm text-white">สมัครสมาชิก</a>
 
             </button>
 
