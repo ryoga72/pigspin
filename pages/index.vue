@@ -95,7 +95,7 @@
                         class="rounded-full btn btn-outline bg-gradient-to-b from-yellow-100 via-[#f0c373] to-[#f0c373] text-black">โปรโมชั่นทั้งหมด</button>
                 </div>
                 <div class="mt-8 service">
-                    <h2 class="text-[40px] font-normal justify-self-center text-white">บริการของเรา
+                    <h2 class="text-[40px] font-normal justify-self-center text-[#ed7638]">บริการของเรา
                     </h2>
                     <p class="text-white">เว็บสล็อตออนไลน เว็บตรงที่พร้อมให้บริการ 24 ชม. เติม-ถอน อัตโนมัติ สะดวก รวดเร็ว
                         ปลอดภัย
