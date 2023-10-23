@@ -11,7 +11,10 @@
             </div>
         </section>
 
-        <div class="mt-10 text">
+        <section>
+            sss
+        </section>
+        <div class="mt-[10px] lg:mt-[10.5rem] text">
             <div class="flex justify-center">
                 <h2 class="text-[#f0c373] text-[1.2rem] font-normal">PG SLOT เว็บที่รวมเกมสล็อตแตกง่ายที่เยอะที่สุด
                 </h2>
@@ -177,11 +180,15 @@ import "@wordpress/block-library/build-style/style.css"
 import "@wordpress/block-library/build-style/theme.css"
 import InfiniteSlideBar from 'vue3-infinite-slide-bar'
 import PubNub from 'pubnub'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
 const response = await useFetch(`https://wordpress-704245-3836348.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&categories=3&per_page=5`)
 const content = await useFetch(`https://wordpress-704245-3836348.cloudwaysapps.com/wp-json/wp/v2/pages/16`)
 const contentJson = JSON.parse(content.data.value)
 const posts: any = []
 const { $gsap } = useNuxtApp()
+
+$gsap.registerPlugin(ScrollTrigger)
 for (const data of response.data.value) {
     posts.push({
         ...data,
@@ -212,28 +219,25 @@ async function SendMsg() {
 onMounted(() => {
     const shrinkTl = $gsap.timeline({
         scrollTrigger: {
-            pin: true,
             trigger: "#shrink",
-            scrub: 1.2,
-            start: "top center",
-            end: "bottom center",
-            markers: true,
-            ease: "power1.in"
+            scrub: 1,
+            start: 'top center',
+            end: 'bottom center',
+            markers: false,
         }
     });
-
-    shrinkTl.to("#shrink", {
+    shrinkTl.to('#shrink', {
         duration: 2,
-        scale: 0.4,
-        filter: "blur(0px)",
-
+        scale: 1,
+        filter: "blur(0px)"
     });
-    shrinkTl.to("#shrink-tagline", {
+
+    shrinkTl.to('#shrink-tagline', {
         duration: 0.4,
-        // delay: -0.7,
+        delay: -0.7,
         opacity: 1,
         y: 0,
-        ease: "power2.in"
+        ease: "power2.out"
     });
 })
 </script>
@@ -262,14 +266,6 @@ onMounted(() => {
 .image img {
     width: 100%;
     object-fit: contain;
-}
-
-#grow-tagline {
-    transform: translateY(60px);
-}
-
-#grow {
-    transform: scale(0.8);
 }
 
 #shrink {
