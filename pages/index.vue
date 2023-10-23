@@ -10,9 +10,10 @@
                 <img src="../assets/bgvideo.webp" alt="maquee-cover" />
             </div>
         </section>
-        <section class="mt-8 image image-shrink" v-if="$device.isMobile">
+        <section class="mt-10 image image-shrink" v-if="$device.isMobile">
             <div id="shrink">
-                <video autoplay muted class="w-[100%]  object-cover" style="height: 100vh;">
+                <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline class="w-[100%]  object-cover"
+                    style="height: 100vh;">
                     <source src="../assets/PIGSPIN360x493.mp4" type="video/mp4" />
                 </video>
             </div>
