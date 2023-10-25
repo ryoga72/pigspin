@@ -369,7 +369,7 @@ import "@wordpress/block-library/build-style/style.css"
 import "@wordpress/block-library/build-style/theme.css"
 import InfiniteSlideBar from 'vue3-infinite-slide-bar'
 
-const response = await useFetch(`https://wordpress-704245-3836348.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&categories=3&per_page=5`)
+const response = await useFetch(`https://wordpress-704245-3836348.cloudwaysapps.com/wp-json/wp/v2/posts?_embed&categories=3&per_page=10`)
 const content = await useFetch(`https://wordpress-704245-3836348.cloudwaysapps.com/wp-json/wp/v2/pages/16`)
 const contentJson = JSON.parse(content.data.value)
 const posts: any = []
