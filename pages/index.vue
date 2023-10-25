@@ -338,7 +338,7 @@
                     </div>
                 </div>
                 <div class="mt-10 post">
-                    <div class="grid gap-4 lg:grid-cols-4 md:grid-cols-2">
+                    <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
                         <div v-for="(data, index) in posts" :key="index"
                             class="items-center justify-center w-full mx-1 duration-300 bg-black rounded-lg cursor-pointer hero_div hover:scale-90 hover:bg-black">
                             <NuxtLink :to="`/article/${data.id}`">
