@@ -3,9 +3,18 @@
         <div :style="{ opacity: textOpacity }">
             <h1>POPSLOT เว็บสล็อตออนไลน์ที่มาแรงที่สุด</h1>
             <h4>
-                <span style="background-color: #ff9100;" class="p-2 rounded-lg text-[#2a2a2e]">TOP 1</span> อันดับ 1
+                <span style="background-color: #ff9100; font-weight: 700;" class="p-2 rounded-lg text-[#2a2a2e] ">TOP
+                    1</span>
+                อันดับ
+                1
                 ในไทยตอนนี้
             </h4>
+            <div class=" btn-regis">
+                <a href="https://m.popslot.bet/login?action=register">
+                    <button class="rounded-full btn text-[#000000] w-[150px]	">สมัครเลย!</button>
+                </a>
+            </div>
+
         </div>
         <div class="image-zoom-container">
             <img class="background-image zoom-bg" src="../assets/bgvideo.webp" alt="Background Image"
@@ -70,18 +79,34 @@ const textOpacity = computed(() => {
 <style scoped>
 h1 {
     position: fixed;
-    top: 50%;
+    top: 71%;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    font-size: 52px;
+    font-size: 36px;
     z-index: 999;
-    color: white
+    color: white;
+    font-weight: 700;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
 }
 
 h4 {
     position: fixed;
-    top: 60%;
+    top: 81%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    z-index: 999;
+    color: white;
+    font-weight: 700;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+
+}
+
+.btn-regis {
+    position: fixed;
+    top: 91%;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
@@ -89,6 +114,7 @@ h4 {
     z-index: 999;
     color: white
 }
+
 
 .image-zoom-container {
     width: 100%;

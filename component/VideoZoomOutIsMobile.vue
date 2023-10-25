@@ -1,11 +1,20 @@
 <template>
     <section>
         <div :style="{ opacity: textOpacity }">
-            <h1>POPSLOT เว็บสล็อตออนไลน์ที่มาแรงที่สุด</h1>
+            <h1 class="title">POPSLOT </h1>
+            <h1> เว็บสล็อตออนไลน์ที่มาแรงที่สุด</h1>
             <h4>
-                <span style="background-color: #ff9100;" class="p-2 rounded-lg text-[#2a2a2e]">TOP 1</span> อันดับ 1
+                <span style="background-color: #ff9100; font-weight: 700;" class="p-2 rounded-lg text-[#2a2a2e] ">TOP
+                    1</span>
+                อันดับ
+                1
                 ในไทยตอนนี้
             </h4>
+            <div class=" btn-regis">
+                <a href="https://m.popslot.bet/login?action=register">
+                    <button class="rounded-full btn text-[#000000] w-[150px]	">สมัครเลย!</button>
+                </a>
+            </div>
         </div>
         <div class="image-zoom-container">
             <img class="background-image zoom-bg" src="../assets/phone-mobile-cut.webp" alt="Background Image"
@@ -69,24 +78,53 @@ const textOpacity = computed(() => {
 </script>
 
 <style scoped>
-h1 {
+.title {
     position: fixed;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
     z-index: 999;
-    color: white
+    color: white;
+    font-weight: 700;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+}
+
+h1 {
+    position: fixed;
+    top: 71%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    z-index: 999;
+    color: white;
+    font-weight: 700;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
 }
 
 h4 {
     position: fixed;
-    top: 60%;
+    top: 77%;
     transform: translateY(-50%);
     width: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
+    z-index: 999;
+    color: white;
+    font-weight: 700;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .25));
+
+}
+
+.btn-regis {
+    position: fixed;
+    top: 83%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
     z-index: 999;
     color: white
 }

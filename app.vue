@@ -2,7 +2,7 @@
   <NuxtPage />
 </template>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap");
 
 * {
   font-family: "Kanit", sans-serif;
