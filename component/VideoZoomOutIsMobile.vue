@@ -1,5 +1,12 @@
 <template>
     <section>
+        <div :style="{ opacity: textOpacity }">
+            <h1>POPSLOT เว็บสล็อตออนไลน์ที่มาแรงที่สุด</h1>
+            <h4>
+                <span style="background-color: #ff9100;" class="p-2 rounded-lg text-[#2a2a2e]">TOP 1</span> อันดับ 1
+                ในไทยตอนนี้
+            </h4>
+        </div>
         <div class="image-zoom-container">
             <img class="background-image zoom-bg" src="../assets/phone-mobile-cut.webp" alt="Background Image"
                 :class="{ 'zoomed': zoomFactorImg }" :style="{ transform: `scale(${zoomFactorImg})` }" />
@@ -49,10 +56,41 @@ onMounted(() => {
 onBeforeUnmount(() => {
     window.removeEventListener('scroll', handleScroll);
 });
+const textOpacity = computed(() => {
+    if (isZoomed.value) {
+        // If zoomed, set a slower transition for opacity
+        return Math.min(1, Math.max(0, (window.scrollY - container.value.offsetTop) / 300));
+    } else {
+        // If not zoomed, keep opacity at 1
+        return 1;
+    }
+});
 
 </script>
 
 <style scoped>
+h1 {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    z-index: 999;
+    color: white
+}
+
+h4 {
+    position: fixed;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    z-index: 999;
+    color: white
+}
+
 .image-zoom-container {
     width: 100%;
     height: 100vh;
