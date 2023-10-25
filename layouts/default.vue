@@ -52,7 +52,7 @@
                     class="text-[12px] lg:text-sm text-white no-underline">เข้าสู่ระบบ</a>
             </button>
             <button
-                class="regis text-white rounded-full btn btn-primary lg:btn-md btn-sm bg-gradient-to-b from-yellow-100 via-[#eb4034] to-[#eb4034] border-none ">
+                class="regis text-white rounded-full btn btn-primary  btn-sm bg-gradient-to-b from-yellow-100 via-[#eb4034] to-[#eb4034] border-none ">
                 <a href="https://m.popslot.bet/login?action=register"
                     class="text-[12px] lg:text-sm text-white no-underline">สมัครสมาชิก</a>
 

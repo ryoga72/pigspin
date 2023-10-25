@@ -67,7 +67,7 @@ onBeforeUnmount(() => {
 const textOpacity = computed(() => {
     if (isZoomed.value) {
         // If zoomed, set a slower transition for opacity
-        return Math.min(1, Math.max(0, (window.scrollY - container.value.offsetTop) / 300));
+        return 0
     } else {
         // If not zoomed, keep opacity at 1
         return 1;

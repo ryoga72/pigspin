@@ -29,7 +29,7 @@
             </video>
         </div>
         <div class="mt-4 game-slide">
-            <infinite-slide-bar duration="25s">
+            <infinite-slide-bar duration="60s">
                 <div class="flex gap-4">
                     <div class="gap-4 card w-96 bg-base-100">
                         <figure><img src="https://assets.pigspin.com/assets/PG/dragon-hatch/maquee-cover.jpg"
@@ -107,7 +107,7 @@
             </infinite-slide-bar>
         </div>
         <div class="mt-4 game-slide">
-            <infinite-slide-bar duration="25s" direction="reverse">
+            <infinite-slide-bar duration="60s" direction="reverse">
                 <div class="flex gap-4">
                     <div class="gap-4 card w-96 bg-base-100">
                         <figure><img src="https://assets.pigspin.com/assets/PG/hip-hop-panda/maquee-cover.jpg"
@@ -181,7 +181,7 @@
             </infinite-slide-bar>
         </div>
         <div class="mt-4 game-slide">
-            <infinite-slide-bar duration="25s">
+            <infinite-slide-bar duration="60s">
                 <div class="flex gap-4">
                     <div class="gap-4 card w-96 bg-base-100">
                         <figure><img src="https://assets.pigspin.com/assets/PG/shaolin-soccer/maquee-cover.jpg"
