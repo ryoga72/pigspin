@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section :style="{ position: positionValue }" class="w-[100%]">
         <div :style="{ opacity: textOpacity }">
             <h1>POPSLOT เว็บสล็อตออนไลน์ที่มาแรงที่สุด</h1>
             <h4>
@@ -10,7 +10,7 @@
                 ในไทยตอนนี้
             </h4>
             <div class=" btn-regis">
-                <a href="https://m.popslot.bet/login?action=register">
+                <a href="https://m.popslot.bet/login?action=register" class="no-underline">
                     <button class="rounded-full btn text-[#000000] w-[150px]	">สมัครเลย!</button>
                 </a>
             </div>
@@ -34,21 +34,28 @@ const isZoomed = ref(false);
 const isZoomedImg = ref(false);
 const zoomFactor = ref(1.2); // Initial zoom factor
 const zoomFactorImg = ref(5); // Initial zoom factor
+const positionValue = ref('fixed'); // Initial zoom factor
 
 const handleScroll = () => {
     const scrollTop = window.scrollY;
     const containerOffset = container.value.offsetTop;
     isZoomed.value = scrollTop > containerOffset;
     isZoomedImg.value = scrollTop > containerOffset;
-
+    if (scrollTop > 300) {
+        positionValue.value = 'sticky'
+    } else {
+        positionValue.value = 'fixed'
+    }
     if (isZoomed.value) {
         zoomFactor.value = 0.6; // Zoom out
     } else {
+
         zoomFactor.value = 1.5; // Zoom in
     }
     if (isZoomedImg.value) {
         zoomFactorImg.value = 1; // Zoom out
     } else {
+
         zoomFactorImg.value = 6; // Zoom in
     }
 };

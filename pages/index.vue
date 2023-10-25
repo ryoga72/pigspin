@@ -261,7 +261,7 @@
                     <h2 class="card-title text-[1.7279166667rem]">สมัครง่าย</h2>
                     <p class="text-[1.4141666667rem]">แค่ใช้เบอร์มือถือและบัญชีธนาคาร</p>
                     <div class="justify-end mt-2 card-actions">
-                        <a href="https://m.popslot.bet/login?action=register">
+                        <a href="https://m.popslot.bet/login?action=register" class="no-underline">
                             <button class="rounded-full btn text-[#f0c373]">สมัครสมาชิกเลย!</button>
                         </a>
                     </div>
@@ -326,7 +326,7 @@
                     </div>
                     <div class="flex justify-center mt-4">
 
-                        <a href="https://m.popslot.bet/login?action=register">
+                        <a href="https://m.popslot.bet/login?action=register" class="no-underline">
                             <button
                                 class="rounded-full btn btn-outline bg-gradient-to-t from-[#fd9228] via-[#fc7112] to-[#ff460d] text-white border-none shadow-xl ">สมัครสมาชิกเลย!</button>
                         </a>
