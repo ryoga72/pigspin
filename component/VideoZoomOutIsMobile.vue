@@ -1,9 +1,7 @@
 <template>
-    <section :style="{ position: positionValue }" class="section-mobile w-[100%] h-[100vh]">
-        <!-- <section class="section-mobile w-[100%]"> -->
+    <section class="w-[100%] ">
         <div :style="{ opacity: textOpacity }">
-            <h1 class="title">POPSLOT </h1>
-            <h1> เว็บสล็อตออนไลน์ที่มาแรงที่สุด</h1>
+            <h1>POPSLOT เว็บสล็อตออนไลน์ที่มาแรงที่สุด</h1>
             <h4>
                 <span style="background-color: #ff9100; font-weight: 700;" class="p-2 rounded-lg text-[#2a2a2e] ">TOP
                     1</span>
@@ -16,6 +14,7 @@
                     <button class="rounded-full btn text-[#000000] w-[150px]	">สมัครเลย!</button>
                 </a>
             </div>
+
         </div>
         <div class="image-zoom-container">
             <img class="background-image zoom-bg" src="../assets/phone-mobile-cut.webp" alt="Background Image"
@@ -33,64 +32,71 @@ import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const isZoomed = ref(false);
 const isZoomedImg = ref(false);
-const zoomFactor = ref(2); // Initial zoom factor
-const zoomFactorImg = ref(7); // Initial zoom factor
-const positionValue = ref('fixed'); // Initial zoom factor
+const zoomFactor = ref(1.2); // Initial zoom factor
+const zoomFactorImg = ref(6); // Initial zoom factor
+const zoomStep = 0.2; // Adjust the zoom step size
 
-const handleScroll = () => {
+
+const handleScroll = (event) => {
     const scrollTop = window.scrollY;
     const containerOffset = container.value.offsetTop;
-    isZoomed.value = scrollTop > containerOffset;
-    isZoomedImg.value = scrollTop > containerOffset;
-    zoomFactorImg.value = scrollTop > containerOffset;
-    console.log("scrollTop", scrollTop)
-    if (scrollTop >= 300) {
-        positionValue.value = 'sticky'
-    } else {
-        positionValue.value = 'fixed'
+    isZoomed.value = scrollTop > containerOffset + 100; // Adjust the trigger point (e.g., 100 pixels)
+    isZoomedImg.value = scrollTop > containerOffset + 100; // Adjust the trigger point (e.g., 100 pixels)
+    if (isZoomedImg.value && event.deltaY > 0) {
+        // Zoom out
+        zoomFactorImg.value = Math.max(zoomFactorImg.value - zoomStep, 1);
+    } else if (event.deltaY < 0) {
+        // Zoom in
+        zoomFactorImg.value = Math.min(zoomFactorImg.value + zoomStep, 6); // Adjust the max zoom level
     }
-    if (isZoomed.value) {
-        zoomFactor.value = 0.6; // Zoom out
-    } else {
-        zoomFactor.value = 1.5; // Zoom in
+    else {
+        zoomFactorImg.value = 1;
+
     }
-    if (isZoomedImg.value) {
-        zoomFactorImg.value = 1; // Zoom out
+    if (isZoomed.value && event.deltaY > 0) {
+        // Zoom out
+        zoomFactor.value = Math.max(zoomFactor.value - zoomStep, 0.6);
+    } else if (event.deltaY < 0) {
+        // Zoom in
+        zoomFactor.value = Math.min(zoomFactor.value + zoomStep, 1.5); // Adjust the max zoom level
     } else {
-        zoomFactorImg.value = 5; // Zoom in
+        zoomFactor.value = 1;
+
     }
+
+
 };
 
 const container = ref(null);
 
 onMounted(() => {
     container.value = document.querySelector('.image-zoom-container');
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('wheel', handleScroll);
 
 });
 
 onBeforeUnmount(() => {
-    window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('wheel', handleScroll);
 });
 const textOpacity = computed(() => {
-    if (isZoomed.value) {
-        return 0
-    } else {
+    if (zoomFactorImg.value === 6) {
+        // When not zoomed, keep text opacity at 1
         return 1;
+    } else {
+        // When zoomed, hide text by setting opacity to 0
+        return 0;
     }
 });
-
 </script>
 
 <style scoped>
-.section-mobile {
+.fixed-top {
     position: fixed;
-    top: 64px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-    margin-bottom: 10%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    /* Adjust the z-index as needed */
 }
 
 .title {
@@ -160,20 +166,28 @@ h4 {
     width: 100%;
     transform: translate(-50%, -50%);
     display: block;
-    object-fit: cover;
-    /* background-size: contain; */
-    /* background-repeat: no-re peat; */
-    /* background-position: 50%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
     z-index: 1;
-    /* transform-origin: center center */
+    transform-origin: center center
 }
 
+.background-image-mobile {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background-size: auto;
+    z-index: 1;
+}
 
 .zoom-video {
     max-width: 100%;
     max-height: 100%;
     width: auto;
-    height: 100vh;
+    height: auto;
     transition: transform 1.5s ease;
 }
 
@@ -181,7 +195,9 @@ h4 {
     max-width: 100%;
     max-height: 100%;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    object-fit: cover;
+
     transition: transform 1.5s ease;
 }
 
