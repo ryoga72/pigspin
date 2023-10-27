@@ -42,7 +42,6 @@ const handleScroll = () => {
     const containerOffset = container.value.offsetTop;
     isZoomed.value = scrollTop > containerOffset;
     isZoomedImg.value = scrollTop > containerOffset;
-    zoomFactorImg.value = scrollTop > containerOffset;
 
     if (isZoomed.value) {
         zoomFactor.value = 0.6; // Zoom out
