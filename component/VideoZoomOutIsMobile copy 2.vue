@@ -1,5 +1,5 @@
 <template>
-    <section class="section-mobile w-[100%] h-[100vh]">
+    <section :style="{ position: positionValue }" class="section-mobile w-[100%] h-[100vh]">
         <!-- <section class="section-mobile w-[100%]"> -->
         <div :style="{ opacity: textOpacity }">
             <h1 class="title">POPSLOT </h1>
@@ -35,7 +35,7 @@ const isZoomed = ref(false);
 const isZoomedImg = ref(false);
 const zoomFactor = ref(2); // Initial zoom factor
 const zoomFactorImg = ref(7); // Initial zoom factor
-const zoomStep = 0.2; // Adjust the zoom step size
+const positionValue = ref('fixed'); // Initial zoom factor
 
 const handleScroll = () => {
     const scrollTop = window.scrollY;
@@ -43,7 +43,12 @@ const handleScroll = () => {
     isZoomed.value = scrollTop > containerOffset;
     isZoomedImg.value = scrollTop > containerOffset;
     zoomFactorImg.value = scrollTop > containerOffset;
-
+    console.log("scrollTop", scrollTop)
+    if (scrollTop >= 300) {
+        positionValue.value = 'sticky'
+    } else {
+        positionValue.value = 'fixed'
+    }
     if (isZoomed.value) {
         zoomFactor.value = 0.6; // Zoom out
     } else {
@@ -78,6 +83,16 @@ const textOpacity = computed(() => {
 </script>
 
 <style scoped>
+.section-mobile {
+    position: fixed;
+    top: 64px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    margin-bottom: 10%;
+}
+
 .title {
     position: fixed;
     top: 65%;
