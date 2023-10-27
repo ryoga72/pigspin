@@ -274,10 +274,10 @@
                     <h2 class="text-[#ED7638] text-[40px] font-normal justify-self-center">โปรโมชั่น
                     </h2>
                     <div v-for="(data, index) in posts" :key="index" class="items-center justify-center w-full mb-4">
-                        <NuxtLink :to="`/article/${data.id}`">
-                            <figure><nuxt-img :src="data.url_img" :alt="data.title.rendered" class="rounded-lg" />
-                            </figure>
-                        </NuxtLink>
+                        <!-- <NuxtLink :to="`/article/${data.id}`"> -->
+                        <figure><nuxt-img :src="data.url_img" :alt="data.title.rendered" class="rounded-lg" />
+                        </figure>
+                        <!-- </NuxtLink> -->
 
                     </div>
                 </div>
@@ -341,15 +341,15 @@
                     <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
                         <div v-for="(data, index) in posts" :key="index"
                             class="items-center justify-center w-full mx-1 duration-300 bg-black rounded-lg cursor-pointer hero_div hover:scale-90 hover:bg-black">
-                            <NuxtLink :to="`/article/${data.id}`">
+                            <!-- <NuxtLink :to="`/article/${data.id}`"> -->
 
-                                <figure><nuxt-img :src="data.url_img" :alt="data.title.rendered" class="rounded-lg" />
-                                </figure>
-                                <div class="p-2 card-body">
-                                    <p class="text-[11.5px] md:text-[18px] text-center text-white">{{ data.title.rendered }}
-                                    </p>
-                                </div>
-                            </NuxtLink>
+                            <figure><nuxt-img :src="data.url_img" :alt="data.title.rendered" class="rounded-lg" />
+                            </figure>
+                            <div class="p-2 card-body">
+                                <p class="text-[11.5px] md:text-[18px] text-center text-white">{{ data.title.rendered }}
+                                </p>
+                            </div>
+                            <!-- </NuxtLink> -->
                         </div>
                     </div>
                     <div class="flex justify-center mt-4">
