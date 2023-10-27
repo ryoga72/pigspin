@@ -158,7 +158,7 @@ h4 {
     max-height: 100%;
     width: auto;
     height: 100vh;
-    transition: transform 1.5s ease;
+    transition: transform 3s ease;
 }
 
 .zoom-bg {
@@ -166,7 +166,7 @@ h4 {
     max-height: 100%;
     width: 100%;
     height: 100%;
-    transition: transform 1.5s ease;
+    transition: transform 3s ease;
 }
 
 .zoomed {
