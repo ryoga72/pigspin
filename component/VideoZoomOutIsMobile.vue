@@ -42,7 +42,8 @@ const handleScroll = (event) => {
     const containerOffset = container.value.offsetTop;
     isZoomed.value = scrollTop > containerOffset + 100; // Adjust the trigger point (e.g., 100 pixels)
     isZoomedImg.value = scrollTop > containerOffset + 100; // Adjust the trigger point (e.g., 100 pixels)
-    if (scrollTop <= 100) {
+    console.log("scrollTop", scrollTop)
+    if (scrollTop === 0) {
         if (isZoomedImg.value && event.deltaY > 0) {
             // Zoom out
             zoomFactorImg.value = Math.max(zoomFactorImg.value - zoomStep, 1);

@@ -273,7 +273,11 @@ import { onMounted, ref } from "vue";
 //         console.log("publishing failed w/ status: ", status);
 //     }
 // }
-
+onMounted(() => {
+    if (process.client && window) {
+        window.history.scrollRestoration = 'auto';
+    }
+});
 </script>
 
 <style scpoed>
