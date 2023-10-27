@@ -42,25 +42,28 @@ const handleScroll = (event) => {
     const containerOffset = container.value.offsetTop;
     isZoomed.value = scrollTop > containerOffset + 100; // Adjust the trigger point (e.g., 100 pixels)
     isZoomedImg.value = scrollTop > containerOffset + 100; // Adjust the trigger point (e.g., 100 pixels)
-    if (isZoomedImg.value && event.deltaY > 0) {
-        // Zoom out
-        zoomFactorImg.value = Math.max(zoomFactorImg.value - zoomStep, 1);
-    } else if (event.deltaY < 0) {
-        // Zoom in
-        zoomFactorImg.value = Math.min(zoomFactorImg.value + zoomStep, 6); // Adjust the max zoom level
-    }
-    else {
-        zoomFactorImg.value = 1;
+    if (scrollTop <= 100) {
+        if (isZoomedImg.value && event.deltaY > 0) {
+            // Zoom out
+            zoomFactorImg.value = Math.max(zoomFactorImg.value - zoomStep, 1);
+        } else if (event.deltaY < 0) {
+            // Zoom in
+            zoomFactorImg.value = Math.min(zoomFactorImg.value + zoomStep, 6); // Adjust the max zoom level
+        }
+        else {
+            zoomFactorImg.value = 1;
 
-    }
-    if (isZoomed.value && event.deltaY > 0) {
-        // Zoom out
-        zoomFactor.value = Math.max(zoomFactor.value - zoomStep, 0.6);
-    } else if (event.deltaY < 0) {
-        // Zoom in
-        zoomFactor.value = Math.min(zoomFactor.value + zoomStep, 1.5); // Adjust the max zoom level
-    } else {
-        zoomFactor.value = 1;
+        }
+        if (isZoomed.value && event.deltaY > 0) {
+            // Zoom out
+            zoomFactor.value = Math.max(zoomFactor.value - zoomStep, 0.6);
+        } else if (event.deltaY < 0) {
+            // Zoom in
+            zoomFactor.value = Math.min(zoomFactor.value + zoomStep, 1.5); // Adjust the max zoom level
+        } else {
+            zoomFactor.value = 1;
+
+        }
 
     }
 

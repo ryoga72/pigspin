@@ -227,52 +227,52 @@
 </template>
 <script setup>
 import { onMounted, ref } from "vue";
-import PubNub from 'pubnub'
-const chat = ref([])
-const chat_send = ref([])
-const msg = ref('')
-const userId = ref((Math.random() + 1).toString(36).substring(7));
-const pubnub = new PubNub({
-    publishKey: "pub-c-7bc82c1b-7294-4711-bf16-63b53443a869",
-    subscribeKey: "sub-c-2e8deb08-9446-49a9-bded-b78c8d876fb1",
-    userId: userId.value,
-    autoNetworkDetection: true, // enable for non-browser environment automatic reconnection
-    restore: true,
-});
-pubnub.fetchMessages(
-    {
-        channels: ['channel_y'],
-        end: '15343325004275466',
-        count: 100
-    },
-    (status, response) => {
-        chat.value = response.channels.channel_y
-        // handle response
-    }
-);
-pubnub.addListener({
-    message: function (msg) {
-        chat.value.push(msg)
-    }
-})
-pubnub.subscribe({
-    channels: ['channel_y'],
-})
-async function SendMsg() {
-    const newMessage = {
-        text: msg.value,
-    };
-    try {
-        const result = await pubnub.publish({
-            message: newMessage,
-            channel: "channel_y",
-        });
-        msg.value = ''
-        console.log("message published w/ server response: ", result);
-    } catch (status) {
-        console.log("publishing failed w/ status: ", status);
-    }
-}
+// import PubNub from 'pubnub'
+// const chat = ref([])
+// const chat_send = ref([])
+// const msg = ref('')
+// const userId = ref((Math.random() + 1).toString(36).substring(7));
+// const pubnub = new PubNub({
+//     publishKey: "pub-c-7bc82c1b-7294-4711-bf16-63b53443a869",
+//     subscribeKey: "sub-c-2e8deb08-9446-49a9-bded-b78c8d876fb1",
+//     userId: userId.value,
+//     autoNetworkDetection: true, // enable for non-browser environment automatic reconnection
+//     restore: true,
+// });
+// pubnub.fetchMessages(
+//     {
+//         channels: ['channel_y'],
+//         end: '15343325004275466',
+//         count: 100
+//     },
+//     (status, response) => {
+//         chat.value = response.channels.channel_y
+//         // handle response
+//     }
+// );
+// pubnub.addListener({
+//     message: function (msg) {
+//         chat.value.push(msg)
+//     }
+// })
+// pubnub.subscribe({
+//     channels: ['channel_y'],
+// })
+// async function SendMsg() {
+//     const newMessage = {
+//         text: msg.value,
+//     };
+//     try {
+//         const result = await pubnub.publish({
+//             message: newMessage,
+//             channel: "channel_y",
+//         });
+//         msg.value = ''
+//         console.log("message published w/ server response: ", result);
+//     } catch (status) {
+//         console.log("publishing failed w/ status: ", status);
+//     }
+// }
 
 </script>
 
