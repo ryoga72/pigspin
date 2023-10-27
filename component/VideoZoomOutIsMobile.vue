@@ -43,30 +43,30 @@ const handleScroll = (event) => {
     isZoomed.value = scrollTop > containerOffset + 100; // Adjust the trigger point (e.g., 100 pixels)
     isZoomedImg.value = scrollTop > containerOffset + 100; // Adjust the trigger point (e.g., 100 pixels)
     console.log("scrollTop", scrollTop)
-    if (scrollTop === 0) {
-        if (isZoomedImg.value && event.deltaY > 0) {
-            // Zoom out
-            zoomFactorImg.value = Math.max(zoomFactorImg.value - zoomStep, 1);
-        } else if (event.deltaY < 0) {
-            // Zoom in
-            zoomFactorImg.value = Math.min(zoomFactorImg.value + zoomStep, 6); // Adjust the max zoom level
-        }
-        else {
-            zoomFactorImg.value = 1;
-
-        }
-        if (isZoomed.value && event.deltaY > 0) {
-            // Zoom out
-            zoomFactor.value = Math.max(zoomFactor.value - zoomStep, 0.6);
-        } else if (event.deltaY < 0) {
-            // Zoom in
-            zoomFactor.value = Math.min(zoomFactor.value + zoomStep, 1.5); // Adjust the max zoom level
-        } else {
-            zoomFactor.value = 1;
-
-        }
+    // if (scrollTop === 0) {
+    if (isZoomedImg.value && event.deltaY > 0) {
+        // Zoom out
+        zoomFactorImg.value = Math.max(zoomFactorImg.value - zoomStep, 1);
+    } else if (event.deltaY < 0) {
+        // Zoom in
+        zoomFactorImg.value = Math.min(zoomFactorImg.value + zoomStep, 6); // Adjust the max zoom level
+    }
+    else {
+        zoomFactorImg.value = 1;
 
     }
+    if (isZoomed.value && event.deltaY > 0) {
+        // Zoom out
+        zoomFactor.value = Math.max(zoomFactor.value - zoomStep, 0.6);
+    } else if (event.deltaY < 0) {
+        // Zoom in
+        zoomFactor.value = Math.min(zoomFactor.value + zoomStep, 1.5); // Adjust the max zoom level
+    } else {
+        zoomFactor.value = 1;
+
+    }
+
+    // }
 
 
 };
@@ -83,13 +83,15 @@ onBeforeUnmount(() => {
     window.removeEventListener('wheel', handleScroll);
 });
 const textOpacity = computed(() => {
-    if (zoomFactorImg.value === 6) {
-        // When not zoomed, keep text opacity at 1
-        return 1;
-    } else {
-        // When zoomed, hide text by setting opacity to 0
-        return 0;
-    }
+    // if (zoomFactorImg.value === 6) {
+    //     // When not zoomed, keep text opacity at 1
+    //     return 1;
+    // } else {
+    //     // When zoomed, hide text by setting opacity to 0
+    //     return 0;
+    // }
+    return 0;
+
 });
 </script>
 
