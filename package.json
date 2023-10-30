@@ -2,14 +2,15 @@
   "name": "nuxt-app",
   "private": true,
   "engines": {
-    "node": "19.0.1"
+    "node": "16.x"
   },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
