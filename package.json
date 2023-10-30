@@ -2,7 +2,8 @@
   "name": "nuxt-app",
   "private": true,
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "~1.0.20"
   },
   "scripts": {
     "build": "nuxt build",
