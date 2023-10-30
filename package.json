@@ -2,7 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "engines": {
-    "node": "16.x",
+    "node": "19.0.1",
     "npm": "10.2.1"
   },
   "scripts": {
