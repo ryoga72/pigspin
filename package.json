@@ -6,7 +6,7 @@
     "npm": "8.19.2"
   },
   "scripts": {
-    "build": "nuxt build",
+    "build": "npm install && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
