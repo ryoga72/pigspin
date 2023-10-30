@@ -4,7 +4,7 @@
             <figure><img src="../assets/logo.webp" alt="maquee-cover" class="w-[110px] h-[80px]" /></figure>
         </div>
         <div class="flex-none gap-2">
-            <!-- <div class="drawer drawer-end">
+            <div class="drawer drawer-end w-[30px] lg:w-[40px]">
                 <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
                 <div class="drawer-content">
                     <label for="my-drawer-4"> <img for="my-drawer-4" src="../assets/msg.svg" alt="maquee-cover"
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <a href="https://line.me/R/ti/p/@popslot">
                 <img src="../assets/line.webp" class="w-[30px] lg:w-[40px]" />
             </a>
@@ -227,52 +227,52 @@
 </template>
 <script setup>
 import { onMounted, ref } from "vue";
-// import PubNub from 'pubnub'
-// const chat = ref([])
-// const chat_send = ref([])
-// const msg = ref('')
-// const userId = ref((Math.random() + 1).toString(36).substring(7));
-// const pubnub = new PubNub({
-//     publishKey: "pub-c-7bc82c1b-7294-4711-bf16-63b53443a869",
-//     subscribeKey: "sub-c-2e8deb08-9446-49a9-bded-b78c8d876fb1",
-//     userId: userId.value,
-//     autoNetworkDetection: true, // enable for non-browser environment automatic reconnection
-//     restore: true,
-// });
-// pubnub.fetchMessages(
-//     {
-//         channels: ['channel_y'],
-//         end: '15343325004275466',
-//         count: 100
-//     },
-//     (status, response) => {
-//         chat.value = response.channels.channel_y
-//         // handle response
-//     }
-// );
-// pubnub.addListener({
-//     message: function (msg) {
-//         chat.value.push(msg)
-//     }
-// })
-// pubnub.subscribe({
-//     channels: ['channel_y'],
-// })
-// async function SendMsg() {
-//     const newMessage = {
-//         text: msg.value,
-//     };
-//     try {
-//         const result = await pubnub.publish({
-//             message: newMessage,
-//             channel: "channel_y",
-//         });
-//         msg.value = ''
-//         console.log("message published w/ server response: ", result);
-//     } catch (status) {
-//         console.log("publishing failed w/ status: ", status);
-//     }
-// }
+import PubNub from 'pubnub'
+const chat = ref([])
+const chat_send = ref([])
+const msg = ref('')
+const userId = ref((Math.random() + 1).toString(36).substring(7));
+const pubnub = new PubNub({
+    publishKey: "pub-c-ff78d3e1-9a02-410f-ba03-4c79f19e162f",
+    subscribeKey: "sub-c-546992ad-e5f0-45bb-baf9-51349d824544",
+    userId: userId.value,
+    autoNetworkDetection: true, // enable for non-browser environment automatic reconnection
+    restore: true,
+});
+pubnub.fetchMessages(
+    {
+        channels: ['channel_y'],
+        end: '15343325004275466',
+        count: 100
+    },
+    (status, response) => {
+        chat.value = response.channels.channel_y
+        // handle response
+    }
+);
+pubnub.addListener({
+    message: function (msg) {
+        chat.value.push(msg)
+    }
+})
+pubnub.subscribe({
+    channels: ['channel_y'],
+})
+async function SendMsg() {
+    const newMessage = {
+        text: msg.value,
+    };
+    try {
+        const result = await pubnub.publish({
+            message: newMessage,
+            channel: "channel_y",
+        });
+        msg.value = ''
+        console.log("message published w/ server response: ", result);
+    } catch (status) {
+        console.log("publishing failed w/ status: ", status);
+    }
+}
 onMounted(() => {
     if (process.client && window) {
         window.history.scrollRestoration = 'auto';
