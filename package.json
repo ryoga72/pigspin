@@ -1,6 +1,9 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "build": "npm install && nuxt build",
     "dev": "nuxt dev",
@@ -8,7 +11,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "node .output/server/index.mjs",
-    "build:digitalocean": "npm install --production=false && npm run build && npm ci"
+    "build:digitalocean": "yarn install --production=false && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile",
   },
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
